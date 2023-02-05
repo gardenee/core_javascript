@@ -19,9 +19,11 @@ let changeBlog = (user, newName) => {
   3. 깊은 복사
     3-1 : JSON 사용
     let newUser = JSON.parse(JSON.stringify(user));
-
     몹시 간단하지만 메소드, prototype 등은 JSON으로 변경이 불가하기에 무시됨.
+
+    3-2 : 재귀적으로 복사
   */
+
 	let deepCopy = (target) => {
 		let result = {};
 		if (typeof target === "object" && target !== null) {
